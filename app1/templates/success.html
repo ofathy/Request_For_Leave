@@ -1,0 +1,45 @@
+
+{% include 'navbar.html' %}
+{%  load static %}
+
+
+{% block content %}
+
+
+<style>
+
+    .alert{
+ margin-top: 200px;
+
+    }
+
+@font-face {
+    font-family: 'f2';
+    src: url('{% static '/fonts/myfont.otf' %}');
+    font-weight: 500;
+    font-style: normal;
+    font-size:22pt;
+}
+.ss{
+font-family:'f2';
+
+}
+
+</style>
+<html>
+<body>
+<div class="alert alert-success ss" role="alert"><h3>
+     Successfuly Done 
+
+      <a href="{{request.META.HTTP_REFERER}}">Click Here For Another request     </a>
+Or
+    <a href="{% url 'main'%}">
+    Here
+        </a>
+  For Main page
+</h3>
+</div>
+   {% endblock %}
+</body>
+</html>
+

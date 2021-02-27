@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+{% include 'navbar.html' %}
+{%  load static %}
+{% load staticfiles %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<br>
+
+<link href="{% static 'css/fonts.css'  %}" rel="stylesheet">
+
+{% block content %}
+<!-- <link rel="stylesheet" type="text/css" href="//www.fontstatic.com/f=dubai-medium,kawkab-light,alahed" /> -->
+<style type="text/css">
+.container{
+margin-top: 120px;
+}
+@font-face {
+    font-family: 'f1';
+    src: url('{% static '/fonts/Almudid.ttf' %}');
+    font-weight: 500;
+    font-style: normal;
+    font-size:9pt;
+}
+@font-face {
+    font-family: 'f2';
+    src: url('{% static '/fonts/Bahij_TheSansArabic-Bold.ttf' %}');
+    font-weight: 500;
+    font-style: normal;
+    font-size:18px;
+.b{
+    font-family:'Arial, Helvetica, sans-serif';
+    color: red;
+    font-size:18px;
+}
+p{
+    font-family:'Arial, Helvetica, sans-serif';
+        font-size:18px;
+   
+}
+.im{
+       padding:40px;
+}
+.x{
+width:290px !important;
+}
+
+
+
+
+
+</style>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+</html>
+<!-- <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css"> -->
+
+<div class="container align-items-center justify-content-center  ">
+<div class="row">
+
+        <div class="col-lg-6 col-md-6 " style="border-style:groove; border-radius: 5px;font-size:20px;font-style:bold;font-family:Arial, Helvetica, sans-serif;">
+         <center>   <img class="im " src='{% static "imge/hist.jpg"  %}' alt="Generic placeholder image" width="190" height="140">
+        <p class="" style="padding:10px;font-size:20px;font-style:bold;font-family:Arial, Helvetica, sans-serif;"> Requests History</p>     
+                 <br/>
+        <p><a class="btn btn-outline-primary btn-lg " href="{% url 'H_req_for_managers'%}" >GO</a></p></center>
+        </div>
+
+       <div class="col-lg-6 col-md-6 " style="border-style:groove; border-radius: 5px;">
+       <center>   <img class=" im" src='{% static "imge/requests.jpg"  %}' alt="Generic placeholder image" width="190" height="140">
+       <p class="" style="padding:10px;font-size:20px;font-style:bold;font-family:Arial, Helvetica, sans-serif;"> Today Leave Requests</p>    
+               <br/>
+       <p><a class="btn btn-outline-primary btn-lg " href="{% url 'Today_req_for_managers'%}" >GO</a></p></center>
+        </div>
+      
+
+
+</div>
+</div>
+
+   {% endblock %}
+
+</body>
+</html>
